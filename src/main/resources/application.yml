@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    active: dev
+missyou:
+  api-package: com.kyo.mall.api
