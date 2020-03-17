@@ -3,7 +3,7 @@ spring:
     active: dev
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
 
 missyou:
   api-package: com.kyo.mall.api

@@ -2,29 +2,24 @@ package com.kyo.mall.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
-@Entity
 @Getter
 @Setter
-@Table(name = "banner")
-public class Banner {
-
+@Entity
+public class Banner extends BaseEntity{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(length = 16)
     private String name;
-    @Transient
     private String description;
-
-    private String img;
     private String title;
+    private String img;
 
-    @OneToMany(mappedBy = "banner", fetch = FetchType.EAGER)
-    @org.hibernate.annotations.ForeignKey(name = "null")
-    private List<BannerItem> items;
+    private List<BannerItem> itemList;
+
 }

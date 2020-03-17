@@ -1,21 +1,25 @@
 package com.kyo.mall.model;
 
-import javax.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.*;
+import java.sql.Timestamp;
+import java.util.Date;
+import java.util.Objects;
+
+@Getter
+@Setter
 @Entity
-public class BannerItem {
+public class BannerItem extends BaseEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String img;
     private String keyword;
-    private Short type;
+    private short type;
+    private Long bannerId;
     private String name;
-//    private Long bannerId;
 
-    @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(value = ConstraintMode.NO_CONSTRAINT), insertable = false,updatable = false, name = "bannerId")
-    private Banner banner;
 
 }
