@@ -1,5 +1,9 @@
 spring:
   profiles:
     active: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+
 missyou:
   api-package: com.kyo.mall.api
