@@ -1,5 +1,6 @@
 package com.kyo.mall.service;
 
+import com.kyo.mall.model.Banner;
 import com.kyo.mall.repository.BannerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
