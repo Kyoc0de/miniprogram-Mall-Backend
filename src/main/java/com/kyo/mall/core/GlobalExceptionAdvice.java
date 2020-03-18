@@ -44,7 +44,7 @@ public class GlobalExceptionAdvice {
 //        ResponseEntity
         UnifyResponse message = new UnifyResponse(e.getCode(),codeConfiguration.getMessage(e.getCode()), method + " " + requestUrl);
         HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON_UTF8);
+        headers.setContentType(MediaType.APPLICATION_JSON);
         HttpStatus httpStatus = HttpStatus.resolve(e.getHttpStatusCode());
 
         ResponseEntity<UnifyResponse> r = new ResponseEntity<>(message, headers, httpStatus);
